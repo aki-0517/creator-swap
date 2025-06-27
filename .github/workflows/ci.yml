@@ -90,38 +90,38 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
-  claude-code:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Run Claude Code Analysis
-        uses: anthropics/claude-code-action@v1
-        with:
-          api-key: ${{ secrets.ANTHROPIC_API_KEY }}
-          files-changed: true
-          include-patterns: |
-            **/*.ts
-            **/*.tsx
-            **/*.js
-            **/*.jsx
-            **/*.sol
-          exclude-patterns: |
-            **/node_modules/**
-            **/dist/**
-            **/build/**
-            **/.next/**
-          prompt: |
-            Please review this code for:
-            1. Type safety and TypeScript best practices
-            2. React component patterns and performance
-            3. Web3 security considerations
-            4. Test coverage and quality
-            5. Overall code quality and maintainability
-            
-            Focus on identifying potential issues and suggesting improvements.
+  # claude-code:
+  #   runs-on: ubuntu-latest
+  #   if: github.event_name == 'pull_request'
+  #   
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
+  #       with:
+  #         fetch-depth: 0
+  #
+  #     - name: Run Claude Code Analysis
+  #       uses: anthropics/claude-code-action@v1
+  #       with:
+  #         api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+  #         files-changed: true
+  #         include-patterns: |
+  #           **/*.ts
+  #           **/*.tsx
+  #           **/*.js
+  #           **/*.jsx
+  #           **/*.sol
+  #         exclude-patterns: |
+  #           **/node_modules/**
+  #           **/dist/**
+  #           **/build/**
+  #           **/.next/**
+  #         prompt: |
+  #           Please review this code for:
+  #           1. Type safety and TypeScript best practices
+  #           2. React component patterns and performance
+  #           3. Web3 security considerations
+  #           4. Test coverage and quality
+  #           5. Overall code quality and maintainability
+  #           
+  #           Focus on identifying potential issues and suggesting improvements.

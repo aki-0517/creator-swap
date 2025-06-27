@@ -40,3 +40,73 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Button styles */
+.btn {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.btn:hover {
+  border-color: #646cff;
+}
+
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.btn-primary {
+  background-color: #646cff;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #535bf2;
+}
+
+.btn-secondary {
+  background-color: #f9f9f9;
+  color: #213547;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #646cff;
+  color: #646cff;
+}
+
+.btn-sm {
+  padding: 0.4em 0.8em;
+  font-size: 0.8em;
+}
+
+.btn-md {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+}
+
+.btn-lg {
+  padding: 0.8em 1.6em;
+  font-size: 1.2em;
+}
+
+@media (prefers-color-scheme: light) {
+  .btn {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+  
+  .btn-secondary {
+    background-color: #213547;
+    color: #ffffff;
+  }
+}

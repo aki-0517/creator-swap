@@ -22,6 +22,6 @@ test('wallet connection button is present', async ({ page }) => {
   await page.goto('/')
   
   // Look for wallet connection related elements
-  const connectButton = page.getByRole('button', { name: /connect/i })
+  const connectButton = page.getByRole('button', { name: /connect wallet/i })
   await expect(connectButton).toBeVisible()
 })
