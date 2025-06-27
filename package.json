@@ -1,0 +1,33 @@
+{
+  "name": "creatorswap",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.2",
+  "scripts": {
+    "dev": "pnpm --filter frontend dev",
+    "build": "pnpm --recursive build",
+    "test": "pnpm --recursive test",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
+    "lint": "pnpm --recursive lint",
+    "format": "pnpm --recursive format",
+    "format:check": "pnpm --recursive format:check",
+    "typecheck": "pnpm --recursive typecheck",
+    "clean": "pnpm --recursive clean",
+    "contracts:compile": "pnpm --filter contracts compile",
+    "contracts:deploy": "pnpm --filter contracts deploy",
+    "frontend:dev": "pnpm --filter frontend dev",
+    "frontend:build": "pnpm --filter frontend build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.3",
+    "@playwright/test": "^1.49.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}
