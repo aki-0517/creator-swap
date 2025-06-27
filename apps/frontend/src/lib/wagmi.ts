@@ -10,7 +10,7 @@ import {
 
 export const config = getDefaultConfig({
   appName: 'CreatorSwap',
-  projectId: process.env.VITE_WALLETCONNECT_PROJECT_ID || '',
+  projectId: import.meta.env.VITE_WALLETCONNECT_PROJECT_ID || '',
   chains: [mainnet, polygon, optimism, arbitrum, base, sepolia],
   ssr: false, // If your dApp uses server side rendering (SSR)
 })
