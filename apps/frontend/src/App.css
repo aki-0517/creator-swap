@@ -99,6 +99,32 @@
   font-size: 1.2em;
 }
 
+/* Wallet styles */
+.wallet-section {
+  margin-bottom: 1rem;
+}
+
+.wallet-connected {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.wallet-info {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.wallet-details p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
 @media (prefers-color-scheme: light) {
   .btn {
     background-color: #f9f9f9;
@@ -108,5 +134,10 @@
   .btn-secondary {
     background-color: #213547;
     color: #ffffff;
+  }
+  
+  .wallet-info {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
