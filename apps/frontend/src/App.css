@@ -125,6 +125,452 @@
   word-break: break-all;
 }
 
+/* Creator Dashboard Styles */
+.creator-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+}
+
+.dashboard-header p {
+  margin: 0;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.dashboard-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: #888;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.nav-button:hover {
+  background-color: rgba(100, 108, 255, 0.1);
+  color: #646cff;
+}
+
+.nav-button.active {
+  background-color: #646cff;
+  color: white;
+}
+
+.dashboard-content {
+  min-height: 600px;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.section-header h3 {
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.section-header p {
+  margin: 0;
+  color: #888;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.input, .textarea {
+  padding: 0.75rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: inherit;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2);
+}
+
+.input.error, .textarea.error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.character-count {
+  align-self: flex-end;
+  font-size: 0.875rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+.field-hint {
+  font-size: 0.875rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+/* Image Upload */
+.image-upload {
+  width: 100%;
+}
+
+.dropzone {
+  border: 2px dashed #333;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dropzone:hover, .dropzone.active {
+  border-color: #646cff;
+  background-color: rgba(100, 108, 255, 0.05);
+}
+
+.dropzone.error {
+  border-color: #ef4444;
+}
+
+.dropzone-content .upload-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.file-info {
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.image-preview {
+  position: relative;
+  max-width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.preview-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+}
+
+.remove-button {
+  background-color: rgba(239, 68, 68, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fee Receivers */
+.fee-receivers {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.receivers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.receivers-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.csv-format-hint {
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.receiver-item {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.receiver-fields {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+.field-group label {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.remove-receiver {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.share-summary {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #10b981;
+  transition: width 0.3s;
+}
+
+.share-total.invalid {
+  color: #ef4444;
+}
+
+.share-total.valid {
+  color: #10b981;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+}
+
+.fee-tip {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(100, 108, 255, 0.1);
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+/* Pool Settings */
+.pool-status-card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.pool-info {
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.fee-distribution-info {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.distribution-breakdown {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.breakdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.breakdown-item .percentage {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #10b981;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Reward Settings */
+.reward-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.reward-card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.card-header {
+  margin-bottom: 1rem;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.75rem;
+}
+
+.toggle-checkbox {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  appearance: none;
+  background-color: #333;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-checkbox:checked {
+  background-color: #646cff;
+}
+
+.toggle-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-checkbox:checked::after {
+  transform: translateX(26px);
+}
+
+.toggle-text {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.reward-history {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.history-placeholder {
+  text-align: center;
+  color: #888;
+  padding: 2rem;
+}
+
+.form-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 @media (prefers-color-scheme: light) {
   .btn {
     background-color: #f9f9f9;
@@ -139,5 +585,57 @@
   .wallet-info {
     background: rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .creator-dashboard {
+    color: #213547;
+  }
+
+  .dashboard-header p,
+  .section-header p,
+  .field-hint,
+  .character-count,
+  .file-info,
+  .csv-format-hint,
+  .pool-info,
+  .empty-state,
+  .history-placeholder {
+    color: #666;
+  }
+
+  .form-group label {
+    color: #213547;
+  }
+
+  .input, .textarea {
+    background-color: #fff;
+    color: #213547;
+    border-color: #ddd;
+  }
+
+  .fee-receivers,
+  .pool-status-card,
+  .fee-distribution-info,
+  .reward-card,
+  .reward-history {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-color: #ddd;
+  }
+
+  .receiver-item {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-color: #ddd;
+  }
+
+  .dropzone {
+    border-color: #ddd;
+  }
+
+  .progress-bar {
+    background-color: #f0f0f0;
+  }
+
+  .toggle-checkbox {
+    background-color: #ddd;
   }
 }

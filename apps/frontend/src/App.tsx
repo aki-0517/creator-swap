@@ -3,11 +3,17 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import { Button } from './components/Button/Button'
 import { WalletButton, WalletInfo } from './components/WalletConnection'
+import { CreatorDashboard } from './pages/CreatorDashboard'
 import { useAccount } from 'wagmi'
 
 function App() {
+  const [currentPage, setCurrentPage] = useState<'home' | 'dashboard'>('home')
   const [count, setCount] = useState(0)
   const { isConnected } = useAccount()
+
+  if (currentPage === 'dashboard') {
+    return <CreatorDashboard />
+  }
 
   return (
     <>
@@ -25,6 +31,14 @@ function App() {
         {isConnected && (
           <div style={{ marginTop: '20px' }}>
             <WalletInfo />
+            <div style={{ marginTop: '20px' }}>
+              <Button 
+                onClick={() => setCurrentPage('dashboard')} 
+                variant="primary"
+              >
+                Creator Dashboard
+              </Button>
+            </div>
           </div>
         )}
         
