@@ -16,6 +16,12 @@ export const tokenIssuanceFormSchema = z.object({
     .max(50, 'Coin name must be at most 50 characters'),
   description: z.string()
     .max(255, 'Description must be at most 255 characters'),
+  uri: z.string()
+    .min(1, 'Metadata URI is required')
+    .refine(
+      (uri) => uri.startsWith('ipfs://') || uri.startsWith('https://') || uri.startsWith('http://'),
+      'URI must be a valid IPFS or HTTP URL'
+    ),
   feeReceivers: z.array(feeReceiverSchema)
     .refine(
       (receivers) => {
@@ -35,6 +41,21 @@ export const poolSettingsSchema = z.object({
 })
 
 export const rewardSettingsSchema = z.object({
+  zoraCoin: z.object({
+    name: z.string().min(1, 'Coin name is required'),
+    symbol: z.string()
+      .min(1, 'Symbol is required')
+      .max(10, 'Symbol must be at most 10 characters'),
+    uri: z.string().url('Must be a valid URI'),
+    payoutRecipient: z.string()
+      .regex(/^0x[a-fA-F0-9]{40}$/, 'Must be a valid Ethereum address'),
+    platformReferrer: z.string()
+      .regex(/^0x[a-fA-F0-9]{40}$/, 'Must be a valid Ethereum address')
+      .optional()
+      .or(z.literal('')),
+    currency: z.enum(['ETH', 'ZORA']),
+    chainId: z.number()
+  }),
   nftRewards: z.object({
     enabled: z.boolean(),
     contractAddress: z.string().optional(),

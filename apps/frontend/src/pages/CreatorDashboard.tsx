@@ -1,43 +1,27 @@
-import { useState } from 'react'
-import { TokenIssuanceSection } from '../components/CreatorDashboard/TokenIssuanceSection'
-import { PoolSettingsSection } from '../components/CreatorDashboard/PoolSettingsSection'
 import { RewardSettingsSection } from '../components/CreatorDashboard/RewardSettingsSection'
 
-export const CreatorDashboard = () => {
-  const [activeSection, setActiveSection] = useState<'token' | 'pool' | 'reward'>('token')
+interface CreatorDashboardProps {
+  onNavigate: (page: 'trading' | 'dashboard' | 'launch') => void
+}
 
+export const CreatorDashboard = ({ onNavigate }: CreatorDashboardProps) => {
   return (
     <div className="creator-dashboard">
       <div className="dashboard-header">
+        <div className="header-controls">
+          <button 
+            className="back-button"
+            onClick={() => onNavigate('trading')}
+          >
+            ← Back to Trading
+          </button>
+        </div>
         <h1>Creator Dashboard</h1>
-        <p>Manage your token, pool settings, and rewards configuration</p>
-      </div>
-
-      <div className="dashboard-nav">
-        <button 
-          className={`nav-button ${activeSection === 'token' ? 'active' : ''}`}
-          onClick={() => setActiveSection('token')}
-        >
-          Token Issuance
-        </button>
-        <button 
-          className={`nav-button ${activeSection === 'pool' ? 'active' : ''}`}
-          onClick={() => setActiveSection('pool')}
-        >
-          Pool Settings
-        </button>
-        <button 
-          className={`nav-button ${activeSection === 'reward' ? 'active' : ''}`}
-          onClick={() => setActiveSection('reward')}
-        >
-          Reward Settings
-        </button>
+        <p>Configure your coin parameters and reward system</p>
       </div>
 
       <div className="dashboard-content">
-        {activeSection === 'token' && <TokenIssuanceSection />}
-        {activeSection === 'pool' && <PoolSettingsSection />}
-        {activeSection === 'reward' && <RewardSettingsSection />}
+        <RewardSettingsSection />
       </div>
     </div>
   )
