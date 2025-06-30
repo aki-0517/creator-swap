@@ -1,0 +1,16 @@
+{
+  "name": "My Creator Coin",
+  "description": "A coin for my creator community",
+  "image": "ipfs://QmSomeImageHash",
+  "external_url": "https://mywebsite.com",
+  "attributes": [
+    {
+      "trait_type": "Creator",
+      "value": "Artist Name"
+    },
+    {
+      "trait_type": "Category", 
+      "value": "Music"
+    }
+  ]
+}

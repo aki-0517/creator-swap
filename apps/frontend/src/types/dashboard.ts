@@ -9,6 +9,7 @@ export interface TokenIssuanceData {
   ticker: string
   coinName: string
   description: string
+  uri: string
   feeReceivers: FeeReceiver[]
 }
 

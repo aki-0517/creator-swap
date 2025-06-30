@@ -483,6 +483,86 @@
   gap: 1rem;
 }
 
+/* Zora Coin Configuration */
+.zora-coin-section {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.zora-coin-section h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #00d4ff;
+}
+
+.zora-coin-section p {
+  margin: 0 0 1.5rem 0;
+  color: #888;
+}
+
+.coin-config-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Success/Error messages */
+.success-message {
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid #10b981;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.success-message h3 {
+  margin: 0 0 1rem 0;
+  color: #10b981;
+}
+
+.success-message p {
+  margin: 0.5rem 0;
+  font-family: monospace;
+  font-size: 0.875rem;
+  word-break: break-all;
+}
+
+.help-text {
+  font-size: 0.875rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+.header-controls {
+  margin-bottom: 1rem;
+}
+
+.back-button {
+  background: none;
+  border: 1px solid #333;
+  color: #888;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  background-color: rgba(100, 108, 255, 0.1);
+  color: #646cff;
+  border-color: #646cff;
+}
+
 /* Reward Settings */
 .reward-types {
   display: grid;
@@ -566,7 +646,7 @@
   padding: 2rem;
 }
 
-.form-actions {
+.reward-form .form-actions {
   margin-top: 2rem;
   text-align: center;
 }
